@@ -67,7 +67,7 @@ pipeline {
                     BUILD_NUMBER2="$BUILD_NUMBER1"
                   
                
-                    sed -i "s+"image.*"+"image:PLUSsujaysuj/springboot-crud-k8s:${BUILD_TAG}"+g" kustomization.yaml
+                    sed -i "s+"newTag.*"+"newTag:PLUS:${BUILD_TAG}"+g" kustomization.yaml
                     ##sed -i 's/_/"/g' app-deployment.yaml
                     sed -i 's/PLUS/ /g' kustomization.yaml
                     git add kustomization.yaml
