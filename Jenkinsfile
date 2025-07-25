@@ -13,11 +13,14 @@ pipeline {
         //git branch: 'main', url: 'https://github.com/sujayt-ghub/Jenkins-Zero-To-Hero.git'
       }
     }
+    stage('clean workspace'){
+     cleanWs()
+    }
     stage('Build and Test') {
       steps {
         sh 'ls -ltr'
         // build the project and create a JAR file
-        sh 'chmod -R 777 //var/lib/jenkins/workspace/*'
+        //sh 'chmod -R 777 //var/lib/jenkins/workspace/*'
         sh 'export DB_HOST=localhost'
         sh 'export DB_NAME=javatechie'
         sh 'export DB_USERNAME=root'
