@@ -13,8 +13,10 @@ pipeline {
         //git branch: 'main', url: 'https://github.com/sujayt-ghub/Jenkins-Zero-To-Hero.git'
       }
     }
-    stage('clean workspace'){
-     cleanWs()
+    stage('clean workspace') {
+     steps {
+      cleanWs()
+     }
     }
     stage('Build and Test') {
       steps {
