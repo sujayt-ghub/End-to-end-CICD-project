@@ -25,8 +25,8 @@ pipeline {
         sh 'export DB_NAME=javatechie'
         sh 'export DB_USERNAME=root'
         sh 'export DB_PASSWORD=root'
-        sh "mvn -Dmaven.test.failure.ignore=true clean package"
-        //sh 'mvn -B -DskipTests clean package'
+        //sh "mvn -Dmaven.test.failure.ignore=true clean package"
+        sh 'mvn -B -DskipTests clean package'
         //sh 'mvn clean package'
       }
     }
