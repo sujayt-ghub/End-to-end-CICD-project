@@ -23,6 +23,8 @@ pipeline {
         sh 'export DB_NAME=javatechie'
         sh 'export DB_USERNAME=root'
         sh 'export DB_PASSWORD=root'
+        sh 'echo "Sujayt12" | sudo -S -k cp -r /var/lib/jenkins/workspace/mavenproj2/target/*.jar .'
+
       }
     }
     /*stage('Static Code Analysis') {
